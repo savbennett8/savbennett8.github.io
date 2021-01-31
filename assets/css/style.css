@@ -1,0 +1,63 @@
+/* thematic colors */
+:root {
+    --main: lightgray;
+    --secondary: ;
+    --tertiary: ;
+}
+
+/* this is to import a "typewriter" font */
+@import @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body {
+    background-color: #D178E7;
+    padding: 0px;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+header {
+    background: linear-gradient(#D178E7, #c204fc63);
+    padding: 20px, 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    color: var(--main);
+    padding-top: 12px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--main);
+    margin-left: 8px;
+}
+
+header nav {
+    margin: 10px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+}
+
+header nav ul li a:hover {
+    background: #42297C;
+    color: var(--main);
+    border-radius: 15px;
+    text-shadow: none;
+}
