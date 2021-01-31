@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>GitHub Profile</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-
     <body>
-        <header>Savannah Bennett</header>
+        <!-- navigation -->
+        <header>
+            <h1>
+                <a href="/">Savannah Bennett</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#resume">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- profile photo -->
+        <img src="./assets/images/image-placeholder.jpg" />
+
+        <!-- key highlight points -->
+        <section class="about-me">
+            <h2>A Little About Me</h2>
+            <ul>
+                <li>Thing 1</li>
+                <li>Thing 2</li>
+                <li>Thing 3</li>
+            </ul>
+        </section>
+
+        <!-- need to add imaged links to Run Buddy & Horiseon -->
+        <main id="portfolio">
+            <h2>Here is some of my work:</h2>
+            <div>
+                <img src="./assets/images/image-placeholder.jpg" />
+                <img src="./assets/images/image-placeholder.jpg" />
+            </div>
+        </main>
+
+        <!-- need to update and download resume as pdf and link in href -->
+        <section id="resume">
+            <h2>Relevant Experience</h2>
+            <p>I am currently taking the full-stack coding bootcamp through the University of Utah</p>
+            <div>
+                <a href="">Click here to see my full resume.</a>
+            </div>
+        </section>
+
+        <!-- contact info section -->
+        <section id="contact">
+            <h3>Contact Information</h3>
+            <address>
+                Located in West Valley City, UT <br />
+                P: 385-241-1138 <br />
+                E: <a href="mailto:savvy.bennett8@gmail.com">savvy.bennett8@gmail.com</a>
+            </address>
+        </section>
         
     </body>
+</html>
