@@ -1,22 +1,22 @@
 /* thematic colors */
 :root {
     --main: lightgray;
-    --secondary: ;
-    --tertiary: ;
+    --secondary: #42297C;
+    --tertiary: ; 
 }
 
 /* this is to import a "typewriter" font */
-@import @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 body {
-    background-color: #D178E7;
+    background-color: #ebaefae1;
     padding: 0px;
     margin: 0;
     font-family: 'Source Code Pro', monospace;
 }
 
 header {
-    background: linear-gradient(#D178E7, #c204fc63);
+    background: linear-gradient(#D178E7, #fcc60463);
     padding: 20px, 35px;
     display: flex;
     justify-content: space-between;
@@ -25,10 +25,10 @@ header {
 
 header h1 {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 36px;
     margin: 0;
     color: var(--main);
-    padding-top: 12px;
+    padding-top: 15px;
 }
 
 header a {
@@ -56,8 +56,28 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background: #42297C;
+    background: var(--secondary);
     color: var(--main);
-    border-radius: 15px;
+    border-radius: 10px;
     text-shadow: none;
+}
+
+.profile-pic {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-pic img {
+    width: 25vw;
+    height: 30vw;
+    margin: 10px;
+    border: ridge 15px;
+    border-color: var(--secondary);
+}
+
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
