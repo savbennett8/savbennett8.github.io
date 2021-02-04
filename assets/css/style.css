@@ -29,6 +29,7 @@ header h1 {
     margin: 0;
     color: var(--main);
     padding-top: 15px;
+    padding-left: 25px;
 }
 
 header a {
@@ -45,8 +46,9 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
     list-style: none;
+    padding-right: 25px;
 }
 
 header nav ul li a {
@@ -62,22 +64,50 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
+.top-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
 .profile-pic {
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    margin-right: 30px;
 }
 
 .profile-pic img {
-    width: 25vw;
-    height: 30vw;
+    width: 20vw;
+    height: 22vw;
     margin: 10px;
     border: ridge 15px;
     border-color: var(--secondary);
 }
 
 .about-me {
+    font-size: 32px;
+}
+
+.about-me h2 {
+    text-decoration-line: underline;
+}
+
+
+#portfolio {
+    text-align: center;
+    font-size: 32px;
+}
+
+.projects {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+
+}
+
+.project img {
+    padding: 40px;
+    width: 20vw;
+    height: 20vw;
 }
