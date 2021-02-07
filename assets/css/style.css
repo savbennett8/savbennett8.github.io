@@ -1,22 +1,22 @@
 /* thematic colors */
 :root {
-    --main: lightgray;
-    --secondary: #42297C;
-    --tertiary: ; 
+    --main: #c5c5c5;
+    --secondary: rgb(245, 241, 241);
+    --tertiary: #353688; 
 }
 
 /* this is to import a "typewriter" font */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 body {
-    background-color: #ebaefae1;
+    background-color: var(--main);
     padding: 0px;
     margin: 0;
     font-family: 'Source Code Pro', monospace;
 }
 
 header {
-    background: linear-gradient(#D178E7, #fcc60463);
+    background: linear-gradient(#D178E7, #fcc60463 );
     padding: 20px, 35px;
     display: flex;
     justify-content: space-between;
@@ -27,14 +27,15 @@ header h1 {
     font-weight: bold;
     font-size: 36px;
     margin: 0;
-    color: var(--main);
+    color: var(--secondary);
     padding-top: 15px;
     padding-left: 25px;
+    text-shadow: 0 0 10px rgb(66, 66, 66);
 }
 
 header a {
     text-decoration: none;
-    color: var(--main);
+    color: var(--secondary);
     margin-left: 8px;
 }
 
@@ -54,12 +55,13 @@ header nav ul {
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(66, 66, 66, 0.5);
 }
 
 header nav ul li a:hover {
-    background: var(--secondary);
-    color: var(--main);
+    background: var(--main);
+    color: var(--tertiary);
     border-radius: 10px;
     text-shadow: none;
 }
@@ -69,7 +71,7 @@ header nav ul li a:hover {
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-    padding: 35px;
+    padding-top: 35px;
 }
 
 .profile-pic {
@@ -83,12 +85,12 @@ header nav ul li a:hover {
     width: 20vw;
     height: 22vw;
     margin: 10px;
-    border: ridge 15px;
-    border-color: var(--secondary);
+    border: groove 15px;
+    border-color: var(--tertiary);
 }
 
 .about-me {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .about-me h2 {
@@ -101,9 +103,9 @@ header nav ul li a:hover {
 }
 
 #portfolio h2 {
-    padding-top: 45px;
-    font-size: 36px;
+    font-size: 42px;
     text-decoration-line: underline;
+    margin-bottom: 0;
 }
 
 .titles {
@@ -112,16 +114,8 @@ header nav ul li a:hover {
     text-align: center;
 }
 
-.title1 {
-    color: #fce138;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.title1, .title2 {
     font-size: 36px;
-}
-
-.title2 {
-    color: #d9dcd6;
-    font-size: 36px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .titles p {
@@ -135,25 +129,35 @@ header nav ul li a:hover {
 }
 
 .project img {
-    margin: 40px;
+    margin: 0;
     width: 38vw;
     height: 25vw;
-    border: ridge 5px;
-    border-color: var(--secondary);
+    border: ridge 10px;
+    border-color: var(--tertiary);
+}
+
+.project img:hover {
+    box-shadow: 0 0 40px var(--secondary);
 }
 
 #resume {
     text-align: center;
-    margin-bottom: 40px;
+    padding-bottom: 45px;
 }
 
 #resume h2 {
     font-size: 36px;
     text-decoration-line: underline;
+    padding-top: 20px;
 }
 
 #resume p, #resume div {
     font-size: 26px;
+}
+
+#resume div:hover {
+    color: var(--secondary);
+    text-shadow: 0 0 10px var(--secondary);
 }
 
 footer {
@@ -161,7 +165,7 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    color: white;
+    color: var(--secondary);
 }
 
 footer h3 {
@@ -172,16 +176,86 @@ footer h3 {
 footer address {
     font-size: 22px;
     padding-right: 25px;
+    align-self: center;
 }
 
 
 /*media queries*/
 
 @media screen and (max-width: 980px) {
+    .about-me {
+        font-size: 22px;
+    }
+    .title1, .title2 {
+        font-size: 22px;
+    }
+    #resume p, #resume div {
+        font-size: 22px;
+    }
+    footer address {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    header nav ul li a {
+        padding: 10px 10px;
+        font-size: 18px;
+    }
+    .about-me h2 {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 575px){
+    header {
+        padding: 4px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    header h1 {
+        font-size: 25px;
+        font-weight: normal;
+        padding-top: 20px;
+    }
+    header nav ul li a {
+        padding: 0;
+        font-size: 15px;
+        font-weight: normal;
+    }
+    .profile-pic img {
+        width: 30vw;
+        height: 32vw;
+        margin: 10px;
+        border: ridge 10px;
+        border-color: var(--tertiary);
+    }
+    footer {
+        background: linear-gradient(#fcc60463, #d178E7);
+        display: flex;
+        color: var(--secondary);
+    }
+    footer h3 {
+        font-size: 18px;
+    }
+    footer address {
+        font-size: 14px;
+    }
+    html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .title1, .title2 {
+        font-size: 18px;
+    }
+    .project img {
+        margin: 0;
+        width: 43vw;
+        height: 30vw;
+    }
 }
