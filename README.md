@@ -8,3 +8,5 @@ This is my GitHub profile page that highlights the work I've done, and informati
 *   My Contact Information
 
 https://savbennett8.github.io/
+
+<img src="./assets/images/final-screenshot.png"/>
